@@ -19,3 +19,12 @@ SELECT a.dept_name, a.dept_name, b.emp_no, c.last_name, c.first_name
 	INNER JOIN employees AS c
 		ON b.emp_no = c.emp_no;
 --</3>
+
+--<4>List emp number, last and first name, and department name
+SELECT b.emp_no, c.last_name, c.first_name, a.dept_name
+	FROM departments AS a
+	INNER JOIN dept_emp AS b
+		ON a.dept_no = b.dept_no
+	INNER JOIN employees AS c
+		ON b.emp_no = c.emp_no;
+--</4>
