@@ -40,3 +40,13 @@ SELECT first_name, last_name, sex
 		last_name LIKE 'B%'
 		);
 --</5>
+
+--<6>List Sales Dept Employees(eployee number, last/first name, and department name)
+SELECT b.emp_no, c.last_name, c.first_name, a.dept_name
+	FROM departments AS a
+	INNER JOIN dept_emp AS b
+		ON a.dept_no = b.dept_no
+	INNER JOIN employees AS c
+		ON b.emp_no = c.emp_no
+	WHERE dept_name = 'Sales';
+--</6>
