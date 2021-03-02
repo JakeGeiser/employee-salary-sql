@@ -1,4 +1,7 @@
 
+--Add DataBase Selector
+USE vizEmployee;
+
 --<1>List Employee Num, Last Name, First Name, Sex, and Salary
 SELECT e.emp_no, e.last_name, e.first_name ,e.sex, s.salary
 	FROM employees AS e INNER JOIN salaries as s
@@ -30,3 +33,10 @@ SELECT b.emp_no, c.last_name, c.first_name, a.dept_name
 --</4>
 
 --<5>List first/last name, sex, where name is Hercules B*
+SELECT first_name, last_name, sex
+	FROM employees
+	WHERE (
+		first_name = 'Hercules' AND
+		last_name LIKE 'B%'
+		);
+--</5>
