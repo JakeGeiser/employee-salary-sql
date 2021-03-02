@@ -28,3 +28,5 @@ SELECT b.emp_no, c.last_name, c.first_name, a.dept_name
 	INNER JOIN employees AS c
 		ON b.emp_no = c.emp_no;
 --</4>
+
+--<5>List first/last name, sex, where name is Hercules B*
