@@ -64,3 +64,9 @@ SELECT b.emp_no, c.last_name, c.first_name, a.dept_name
 		);
 --</7>
 
+--<8>List frequency of last names
+SELECT last_name, COUNT(last_name) AS 'Count'
+	FROM employees
+	GROUP BY last_name
+	ORDER BY 'Count';
+--</8>
