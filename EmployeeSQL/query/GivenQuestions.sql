@@ -70,3 +70,11 @@ SELECT last_name, COUNT(last_name) AS 'Count'
 	GROUP BY last_name
 	ORDER BY 'Count';
 --</8>
+
+--<extra>
+----<fool>Look at Foolsday
+SELECT first_name, last_name
+	FROM employees
+	WHERE last_name = 'Foolsday';
+----</fool>
+
