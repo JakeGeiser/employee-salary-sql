@@ -78,3 +78,10 @@ SELECT first_name, last_name
 	WHERE last_name = 'Foolsday';
 ----</fool>
 
+----<ID>look at your employee number
+SELECT e.emp_no, e.last_name, e.first_name ,e.sex, s.salary
+	FROM employees AS e INNER JOIN salaries as s
+	ON e.emp_no = s.emp_no
+	WHERE e.emp_no = 499942;
+----</ID>
+--</extra>
