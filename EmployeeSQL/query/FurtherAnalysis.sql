@@ -37,5 +37,4 @@ SELECT b.emp_no, c.last_name, c.first_name, c.sex, a.dept_name, e.title, d.salar
 	INNER JOIN titles AS e
 		ON c.emp_title_id = e.title_id;
 SELECT * FROM #masterTemp;
-
 --</3>
