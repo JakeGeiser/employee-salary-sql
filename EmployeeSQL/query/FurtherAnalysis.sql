@@ -1,3 +1,6 @@
+--Add database selector
+USE vizEmployee;
+
 --<1>Get list of employees that have been at least 2 departments
 ----First show how many departments each employee has been in
 SELECT emp_no, COUNT(emp_no) AS NoD
@@ -20,5 +23,19 @@ SELECT e.emp_no, COUNT(e.emp_no) AS "Number of Dept"
 	GROUP BY e.emp_no;
 --</2>
 
-SELECT *
-	FROM dept_emp;
+--<3>Create temporary master table so I don't need to join each time
+DROP TABLE IF EXISTS #masterTemp;
+SELECT b.emp_no, c.last_name, c.first_name, c.sex, a.dept_name, e.title, d.salary, c.hire_date
+	INTO #masterTemp
+	FROM departments AS a
+	INNER JOIN dept_emp AS b
+		ON a.dept_no = b.dept_no
+	INNER JOIN employees AS c
+		ON b.emp_no = c.emp_no
+	INNER JOIN salaries AS d
+		ON b.emp_no = d.emp_no
+	INNER JOIN titles AS e
+		ON c.emp_title_id = e.title_id;
+SELECT * FROM #masterTemp;
+
+--</3>
