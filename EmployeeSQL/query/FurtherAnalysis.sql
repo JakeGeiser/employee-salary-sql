@@ -38,3 +38,9 @@ SELECT b.emp_no, c.last_name, c.first_name, c.sex, a.dept_name, e.title, d.salar
 		ON c.emp_title_id = e.title_id;
 SELECT * FROM #masterTemp;
 --</3>
+
+--<4>Show total hire salary for each department each year
+SELECT YEAR(hire_date) AS "Hire Year", dept_name, SUM(salary) AS "Salary Total"
+	FROM #masterTemp
+	GROUP BY YEAR(hire_date), dept_name;
+--</4>
