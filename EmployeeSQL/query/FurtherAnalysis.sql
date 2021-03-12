@@ -44,3 +44,8 @@ SELECT YEAR(hire_date) AS "Hire Year", dept_name, SUM(salary) AS "Salary Total"
 	FROM #masterTemp
 	GROUP BY YEAR(hire_date), dept_name;
 --</4>
+
+SELECT YEAR(hire_date) AS "Hire Year", SUM(salary) AS "Salary Total"
+	FROM #masterTemp
+	GROUP BY YEAR(hire_date)
+	ORDER BY "Hire Year";
