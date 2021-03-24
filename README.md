@@ -1,4 +1,9 @@
 # Employee Hire Salary
+- [Introduction](#introduction)
+- [Database Relationship](#database-relationship)
+- [Tableau Analysis](#tableau-analysis)
+- [Further Evidence of Fake Data](#further-evidence-of-fake-data)
+- [Contact](#contact)
 
 ## Introduction
 Taking 6 csv files with information about employees when they were hired (including: salary, department, and position title), creating database relationships, and providng anlysis. Some general questions considered are...
