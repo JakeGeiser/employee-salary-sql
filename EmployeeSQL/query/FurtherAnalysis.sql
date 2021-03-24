@@ -49,3 +49,7 @@ SELECT YEAR(hire_date) AS "Hire Year", SUM(salary) AS "Salary Total"
 	FROM #masterTemp
 	GROUP BY YEAR(hire_date)
 	ORDER BY "Hire Year";
+--<5>Show April Foolsday
+SELECT *
+	FROM #masterTemp
+	WHERE last_name = 'Foolsday';
